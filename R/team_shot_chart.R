@@ -30,7 +30,7 @@ team_shot_chart <- function(game_ids, team, heatmap = F) {
       p1 <-
         ggplot2::ggplot() +
         ggplot2::stat_density_2d(data = team_shots,
-                                 aes(x = x, y = y, fill = stat(density / density * .7)),
+                                 aes(x = x, y = y, fill = stat(density / (max(density) * .7))),
                                  geom = "raster", contour = FALSE, interpolate = TRUE, n = 200) +
         ggplot2::geom_polygon(data = side_one, aes(x = x, y = y, group = group), col = "gray") +
         ggplot2::geom_point(alpha = 0.2, size = 1.5) +
@@ -55,7 +55,7 @@ team_shot_chart <- function(game_ids, team, heatmap = F) {
         ggplot2::labs(
           title = paste0(team," Shots"),
           shape = "Shot Outcome",
-          caption = "Meyappan Subbaiah (@msubbaiah1) Data Accessed via ncaahoopR")
+          caption = "Corey Caudill (@CoreyCaudBBN) Data Accessed via ncaahoopR")
       return(p1)
     }
     
