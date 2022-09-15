@@ -87,7 +87,7 @@ team_shot_chart <- function(game_ids, team, heatmap = F) {
                          ggplot2::labs(
                            title = paste(team, "Shots"),
                            shape = "Shot Outcome",
-                           caption = "Meyappan Subbaiah (@msubbaiah1) Data Accessed via ncaahoopR"))
+                           caption = "Corey Caudill (@CoreyCaudBBN) Data Accessed via ncaahoopR"))
     return(p1)
   }
 }
