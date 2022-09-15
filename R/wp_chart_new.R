@@ -162,7 +162,7 @@ wp_chart_new <- function(game_id, home_col = NULL, away_col = NULL, include_spre
                   title = paste0(ifelse(include_spread, "", "Naive "), "Win Probability Chart for ", home_team,
                                  " vs. ", away_team),
                   subtitle = st,
-                  caption = "Luke Benz (@recspecs730) Data Accessed via ncaahoopR") +
+                  caption = "Corey Caudill (@CoreyCaudBBN) Data Accessed via ncaahoopR") +
     ggplot2::theme(plot.title = element_text(size = 16, hjust = 0.5),
                    plot.subtitle = element_text(size = 12, hjust = 0.5, face = "italic"),
                    axis.title = element_text(size = 14),
