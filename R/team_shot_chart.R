@@ -30,7 +30,7 @@ team_shot_chart <- function(game_ids, team, heatmap = F) {
       p1 <-
         ggplot2::ggplot() +
         ggplot2::stat_density_2d(data = team_shots,
-                                 aes(x = x, y = y, fill = stat(density / (max(density) * .7))),
+                                 aes(x = x, y = y, fill = stat(density / (max(density) ))),
                                  geom = "raster", contour = FALSE, interpolate = TRUE, n = 200) +
         ggplot2::geom_polygon(data = side_one, aes(x = x, y = y, group = group), col = "gray") +
         ggplot2::geom_point(alpha = 0.2, size = 1.5) +
